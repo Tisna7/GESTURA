@@ -1,0 +1,49 @@
+<footer class="border-t border-border/50 mt-20">
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="h-10 w-10 rounded-xl bg-primary flex items-center justify-center"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-graduation-cap h-6 w-6 text-primary-foreground">
+                            <path
+                                d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+                            </path>
+                            <path d="M22 10v6"></path>
+                            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                        </svg></div><span class="text-xl font-bold">Gestura</span>
+                </div>
+                <p class="text-sm text-muted-foreground">Platform pembelajaran bahasa isyarat interaktif terbaik di
+                    Indonesia.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Tentang</h4>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li><a href="#" class="hover:text-primary transition-colors">Tentang Gestura</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Tim Kami</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Karir</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Dukungan</h4>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li><a href="#" class="hover:text-primary transition-colors">Kontak</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">FAQ</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Bantuan</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Legal</h4>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-border/50 mt-8 pt-8 text-center text-sm text-muted-foreground">
+            <p>© 2025 Gestura. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
