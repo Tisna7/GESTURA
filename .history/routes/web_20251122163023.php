@@ -9,8 +9,3 @@ Route::get('/', function () {
 Route::get('/profile', function () {
     return view('user.profile');
 });
-Route::get('/materi', function () {
-    return view('user.materi');
-});
-
-

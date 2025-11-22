@@ -1,0 +1,104 @@
+@extends('app')
+@section('content')
+
+
+<main class="container mx-auto px-4 py-8">
+    <div class="space-y-8">
+        <div>
+            <h1 class="text-4xl font-bold mb-2">Gesture Lab 🧪</h1>
+            <p class="text-muted-foreground text-lg">Praktik dan coba gesture dengan teknologi AI</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+                class="rounded-lg border text-card-foreground shadow-sm p-6 cursor-pointer transition-all bg-card border-border/50 hover:border-primary/50">
+                <div class="text-4xl mb-3">👋</div>
+                <h3 class="text-xl font-bold mb-2">Coba Gerakan</h3>
+                <p class="text-sm text-muted-foreground">Pilih gerakan dan coba tiru</p>
+            </div>
+            <div
+                class="rounded-lg border text-card-foreground shadow-sm p-6 cursor-pointer transition-all bg-primary/10 border-primary hover-glow">
+                <div class="text-4xl mb-3">🤖</div>
+                <h3 class="text-xl font-bold mb-2">Gesture to Text</h3>
+                <p class="text-sm text-muted-foreground">Translator AI real-time</p>
+            </div>
+            <div
+                class="rounded-lg border text-card-foreground shadow-sm p-6 cursor-pointer transition-all bg-card border-border/50 hover:border-primary/50">
+                <div class="text-4xl mb-3">✨</div>
+                <h3 class="text-xl font-bold mb-2">Free Practice</h3>
+                <p class="text-sm text-muted-foreground">Latihan bebas</p>
+            </div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-6">
+            <div class="rounded-lg border text-card-foreground shadow-sm lg:col-span-2 p-6 bg-card border-border/50">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-camera h-5 w-5">
+                            <path
+                                d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z">
+                            </path>
+                            <circle cx="12" cy="13" r="3"></circle>
+                        </svg>Camera View</h3>
+                    <div
+                        class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                        Ready</div>
+                </div>
+                <div
+                    class="aspect-video rounded-xl bg-gradient-to-br from-muted/30 to-muted/10 border border-border/50 flex items-center justify-center mb-6">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">📹</div>
+                        <p class="text-muted-foreground">Camera feed akan tampil di sini</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4"><button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 hover-glow"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-play h-5 w-5 mr-2">
+                            <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                        </svg>Mulai</button></div>
+            </div>
+            <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                <h3 class="text-xl font-bold mb-6">Hasil Deteksi</h3>
+                <div class="space-y-4">
+                    <div class="p-4 rounded-lg bg-muted/30 min-h-[200px]">
+                        <p class="text-muted-foreground text-center">Teks hasil deteksi akan muncul di sini...</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between text-sm"><span
+                                class="text-muted-foreground">Confidence</span>
+                            <div
+                                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                                92%</div>
+                        </div>
+                        <div class="flex items-center justify-between text-sm"><span
+                                class="text-muted-foreground">Terakhir deteksi</span><span class="font-medium">Huruf
+                                "A"</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                <h3 class="text-lg font-bold mb-4">💡 Tips Menggunakan Gesture Lab</h3>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li>• Pastikan pencahayaan ruangan cukup terang</li>
+                    <li>• Posisikan tangan di tengah frame kamera</li>
+                    <li>• Lakukan gerakan dengan jelas dan tidak terlalu cepat</li>
+                    <li>• Gunakan background yang tidak terlalu ramai</li>
+                </ul>
+            </div>
+            <div
+                class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
+                <h3 class="text-lg font-bold mb-4">🚀 Fitur AI Coming Soon</h3>
+                <ul class="space-y-2 text-sm text-muted-foreground">
+                    <li>• Real-time gesture recognition dengan deep learning</li>
+                    <li>• Feedback akurasi dan saran perbaikan</li>
+                    <li>• Deteksi multi-gesture (kata dan kalimat)</li>
+                    <li>• Progress tracking per gerakan</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>

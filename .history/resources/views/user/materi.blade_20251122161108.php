@@ -1,0 +1,914 @@
+@extends('app')
+@extends('')
+
+<main class="container mx-auto px-4 py-8">
+    <div class="space-y-8">
+        <div>
+            <h1 class="text-4xl font-bold mb-2">Materi Pembelajaran</h1>
+            <p class="text-muted-foreground text-lg">Jelajahi koleksi lengkap materi bahasa isyarat</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                <div class="text-3xl font-bold text-primary mb-2">7/33</div>
+                <div class="text-sm text-muted-foreground">Materi Diselesaikan</div>
+            </div>
+            <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                <div class="text-3xl font-bold text-primary mb-2">33</div>
+                <div class="text-sm text-muted-foreground">Total Pelajaran</div>
+            </div>
+            <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                <div class="text-3xl font-bold text-primary mb-2">21%</div>
+                <div class="text-sm text-muted-foreground">Progress Keseluruhan</div>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1 relative"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-search absolute left-3 top-3 h-5 w-5 text-muted-foreground">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg><input type="text"
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm pl-10"
+                    placeholder="Cari materi..." value=""></div>
+            <div class="flex gap-2 overflow-x-auto pb-2"><button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 hover-glow">Semua</button><button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">Abjad</button><button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">Angka</button><button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">Imbuhan</button><button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">Kosakata</button>
+            </div>
+        </div>
+        <div class="space-y-8">
+            <div class="space-y-4">
+                <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                    <div class="flex items-start gap-4">
+                        <div class="text-5xl">🔤</div>
+                        <div class="flex-1">
+                            <h2 class="text-2xl font-bold mb-2">Abjad A-Z</h2>
+                            <p class="text-muted-foreground mb-4">Pelajari 26 huruf abjad dalam bahasa isyarat Indonesia
+                            </p>
+                            <div class="flex items-center gap-4 mb-3"><span class="text-sm text-muted-foreground">3 / 8
+                                    materi selesai</span>
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                                    38%</div>
+                            </div>
+                            <div class="w-full bg-secondary/30 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full transition-all" style="width: 37.5%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Huruf A</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">2 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Ulangi</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Huruf B</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">2 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Ulangi</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Huruf C</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">2 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Ulangi</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Huruf D</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">2 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Huruf E</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">2 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Huruf F</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">2 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Huruf G</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">2 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Huruf H</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">2 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                    <div class="flex items-start gap-4">
+                        <div class="text-5xl">🔢</div>
+                        <div class="flex-1">
+                            <h2 class="text-2xl font-bold mb-2">Angka 1-100</h2>
+                            <p class="text-muted-foreground mb-4">Cara menyampaikan angka 1 hingga 100 dengan gerakan
+                                tangan</p>
+                            <div class="flex items-center gap-4 mb-3"><span class="text-sm text-muted-foreground">2 /
+                                    4 materi selesai</span>
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                                    50%</div>
+                            </div>
+                            <div class="w-full bg-secondary/30 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full transition-all" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Angka 1-10</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Ulangi</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Angka 11-20</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Ulangi</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Angka 21-50</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">8 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Angka 51-100</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">10 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                    <div class="flex items-start gap-4">
+                        <div class="text-5xl">📝</div>
+                        <div class="flex-1">
+                            <h2 class="text-2xl font-bold mb-2">Imbuhan Dasar</h2>
+                            <p class="text-muted-foreground mb-4">Imbuhan me-, di-, ke-, pe- dan penggunaannya</p>
+                            <div class="flex items-center gap-4 mb-3"><span class="text-sm text-muted-foreground">0 /
+                                    4 materi selesai</span>
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                                    0%</div>
+                            </div>
+                            <div class="w-full bg-secondary/30 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full transition-all" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Imbuhan me-</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Imbuhan di-</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Imbuhan ke-</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Imbuhan pe-</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                    <div class="flex items-start gap-4">
+                        <div class="text-5xl">😊</div>
+                        <div class="flex-1">
+                            <h2 class="text-2xl font-bold mb-2">Emosi &amp; Perasaan</h2>
+                            <p class="text-muted-foreground mb-4">Ekspresikan berbagai emosi dengan bahasa isyarat</p>
+                            <div class="flex items-center gap-4 mb-3"><span class="text-sm text-muted-foreground">0 /
+                                    4 materi selesai</span>
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                                    0%</div>
+                            </div>
+                            <div class="w-full bg-secondary/30 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full transition-all" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Senang</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">3 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Sedih</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">3 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Marah</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">3 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Takut</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">3 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                    <div class="flex items-start gap-4">
+                        <div class="text-5xl">🏠</div>
+                        <div class="flex-1">
+                            <h2 class="text-2xl font-bold mb-2">Benda Sehari-hari</h2>
+                            <p class="text-muted-foreground mb-4">Kosakata benda yang sering digunakan sehari-hari</p>
+                            <div class="flex items-center gap-4 mb-3"><span class="text-sm text-muted-foreground">0 /
+                                    3 materi selesai</span>
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                                    0%</div>
+                            </div>
+                            <div class="w-full bg-secondary/30 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full transition-all" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Rumah &amp; Ruangan
+                            </h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Peralatan Dapur</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Peralatan Kamar</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                    <div class="flex items-start gap-4">
+                        <div class="text-5xl">👋</div>
+                        <div class="flex-1">
+                            <h2 class="text-2xl font-bold mb-2">Sapaan &amp; Perkenalan</h2>
+                            <p class="text-muted-foreground mb-4">Cara menyapa dan memperkenalkan diri</p>
+                            <div class="flex items-center gap-4 mb-3"><span class="text-sm text-muted-foreground">2 /
+                                    3 materi selesai</span>
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                                    67%</div>
+                            </div>
+                            <div class="w-full bg-secondary/30 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full transition-all" style="width: 66.6667%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Salam &amp; Sapaan
+                            </h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">4 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Ulangi</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Perkenalan Diri</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-circle-check-big h-4 w-4 text-green-500 flex-shrink-0">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">6 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Ulangi</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Pertanyaan Umum</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                    <div class="flex items-start gap-4">
+                        <div class="text-5xl">🏃</div>
+                        <div class="flex-1">
+                            <h2 class="text-2xl font-bold mb-2">Aktivitas Sehari-hari</h2>
+                            <p class="text-muted-foreground mb-4">Gerakan untuk berbagai aktivitas harian</p>
+                            <div class="flex items-center gap-4 mb-3"><span class="text-sm text-muted-foreground">0 /
+                                    4 materi selesai</span>
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                                    0%</div>
+                            </div>
+                            <div class="w-full bg-secondary/30 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full transition-all" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Makan &amp; Minum</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">4 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Tidur &amp; Istirahat
+                            </h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">4 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Bekerja &amp; Belajar
+                            </h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Olahraga</h4><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
+                    <div class="flex items-start gap-4">
+                        <div class="text-5xl">👨&zwj;👩&zwj;👧&zwj;👦</div>
+                        <div class="flex-1">
+                            <h2 class="text-2xl font-bold mb-2">Keluarga &amp; Relasi</h2>
+                            <p class="text-muted-foreground mb-4">Istilah keluarga dan hubungan sosial</p>
+                            <div class="flex items-center gap-4 mb-3"><span class="text-sm text-muted-foreground">0
+                                    / 3 materi selesai</span>
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                                    0%</div>
+                            </div>
+                            <div class="w-full bg-secondary/30 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full transition-all" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Keluarga Inti</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">5 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Keluarga Besar</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">6 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                    <div
+                        class="rounded-lg border text-card-foreground shadow-sm p-4 bg-card border-border/50 hover:border-primary/50 transition-all hover-glow cursor-pointer group">
+                        <div class="flex items-start justify-between mb-2">
+                            <h4 class="font-semibold group-hover:text-primary transition-colors">Teman &amp; Kenalan
+                            </h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock h-4 w-4 text-muted-foreground flex-shrink-0">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2">
+                                </rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <p class="text-xs text-muted-foreground mb-3">4 menit</p><button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-glow"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-play h-3 w-3 mr-1">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>Mulai</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

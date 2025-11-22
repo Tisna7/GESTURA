@@ -12,5 +12,3 @@ Route::get('/profile', function () {
 Route::get('/materi', function () {
     return view('user.materi');
 });
-
-
