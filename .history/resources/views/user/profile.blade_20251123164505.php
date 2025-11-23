@@ -15,7 +15,7 @@
                 <div class="flex flex-col items-center gap-4"><span class="relative flex overflow-hidden rounded-full h-24 w-24 border-4 border-primary/20">
     <img class="h-full w-full object-cover"
         src="https://api.dicebear.com/7.x/avataaars/svg?seed={{ Auth::user()->profile_image }}">
-</span><a href="/profile/edit">
+</span><a href="/">
 <button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -119,10 +119,7 @@
                             <polyline points="12 6 12 12 16 14"></polyline>
                         </svg></div>
                     <div>
-                        <div class="text-lg font-bold">{{ \Carbon\Carbon::parse(Auth::user()->last_login)
-    ->timezone('Asia/Jakarta')
-    ->format('d F Y, H:i') }}
-</div>
+                        <div class="text-lg font-bold">22 November 2025, 14:30</div>
                         <div class="text-sm text-muted-foreground">Terakhir Login</div>
                     </div>
                 </div>
@@ -193,9 +190,7 @@
         <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
             <h3 class="text-xl font-bold mb-4">Informasi Tambahan</h3>
             <div class="space-y-2 text-sm text-muted-foreground">
-                <p>• Bergabung sejak: {{ \Carbon\Carbon::parse(Auth::user()->created_at)
-    ->timezone('Asia/Jakarta')
-    ->format('d F Y') }}</p>
+                <p>• Bergabung sejak: {{ Auth::user()->created_at }}</p>
                 <p>• Total materi diselesaikan: 12 materi</p>
                 <p>• Level quiz tertinggi: Level 8</p>
                 <p>• Streak harian: 5 hari berturut-turut</p>

@@ -193,9 +193,9 @@
         <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
             <h3 class="text-xl font-bold mb-4">Informasi Tambahan</h3>
             <div class="space-y-2 text-sm text-muted-foreground">
-                <p>• Bergabung sejak: {{ \Carbon\Carbon::parse(Auth::user()->created_at)
+                <p>• Bergabung sejak: {{ \Carbon\Carbon::parse(Auth::user()->last_login)
     ->timezone('Asia/Jakarta')
-    ->format('d F Y') }}</p>
+    ->format('d F Y, H:i') }}</p>
                 <p>• Total materi diselesaikan: 12 materi</p>
                 <p>• Level quiz tertinggi: Level 8</p>
                 <p>• Streak harian: 5 hari berturut-turut</p>

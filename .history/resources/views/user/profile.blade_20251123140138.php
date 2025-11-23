@@ -12,11 +12,10 @@
         </div>
         <div class="rounded-lg border text-card-foreground shadow-sm p-8 bg-card border-border/50">
             <div class="flex flex-col md:flex-row gap-8">
-                <div class="flex flex-col items-center gap-4"><span class="relative flex overflow-hidden rounded-full h-24 w-24 border-4 border-primary/20">
-    <img class="h-full w-full object-cover"
-        src="https://api.dicebear.com/7.x/avataaars/svg?seed={{ Auth::user()->profile_image }}">
-</span><a href="/profile/edit">
-<button
+                <div class="flex flex-col items-center gap-4"><span
+                        class="relative flex shrink-0 overflow-hidden rounded-full h-32 w-32 border-4 border-primary/20"><img
+                            class="aspect-square h-full w-full" alt="Ahmad Fauzi"
+                            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmad"></span><button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"><svg
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -25,7 +24,7 @@
                             <path
                                 d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z">
                             </path>
-                        </svg>Ubah Foto</button></a></div>
+                        </svg>Ubah Foto</button></div>
                 <div class="flex-1 space-y-4">
                     <div>
                         <h2 class="text-3xl font-bold mb-1">{{ Auth::user()->username }}</h2>
@@ -78,7 +77,7 @@
                             <p class="text-muted-foreground">{{ Auth::user()->bio ?? '-' }}</p>
                         </div>
                     </div>
-                    <div class="pt-4"><a href="{{ route('profile.edit') }}"><button
+                    <div class="pt-4"><button
                             class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 hover-glow"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -87,7 +86,7 @@
                                 <path
                                     d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z">
                                 </path>
-                            </svg>Edit Profil</button></a></div>
+                            </svg>Edit Profil</button></div>
                 </div>
             </div>
         </div>
@@ -119,10 +118,7 @@
                             <polyline points="12 6 12 12 16 14"></polyline>
                         </svg></div>
                     <div>
-                        <div class="text-lg font-bold">{{ \Carbon\Carbon::parse(Auth::user()->last_login)
-    ->timezone('Asia/Jakarta')
-    ->format('d F Y, H:i') }}
-</div>
+                        <div class="text-lg font-bold">22 November 2025, 14:30</div>
                         <div class="text-sm text-muted-foreground">Terakhir Login</div>
                     </div>
                 </div>
@@ -193,9 +189,7 @@
         <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
             <h3 class="text-xl font-bold mb-4">Informasi Tambahan</h3>
             <div class="space-y-2 text-sm text-muted-foreground">
-                <p>• Bergabung sejak: {{ \Carbon\Carbon::parse(Auth::user()->created_at)
-    ->timezone('Asia/Jakarta')
-    ->format('d F Y') }}</p>
+                <p>• Bergabung sejak: {{ Auth::user()->created_at }}</p>
                 <p>• Total materi diselesaikan: 12 materi</p>
                 <p>• Level quiz tertinggi: Level 8</p>
                 <p>• Streak harian: 5 hari berturut-turut</p>

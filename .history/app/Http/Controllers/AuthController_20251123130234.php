@@ -26,10 +26,15 @@ class AuthController extends Controller
     {
         $request->validate([
             'fullName' => 'required|min:3',
-            'username' => 'required|min:3|unique:users,username',
+            'username' => 'required|min:3',
             'email'    => 'required|email|unique:users,email',
-            'password' => 'required|min:6'
-        ]);
+            'password' => 'required|min:6|regex:/[0-9]/'
+        ],[
+        // Pesan khusus
+        'password.min'  => 'Password minimal 6 karakter.',
+        'password.regex' => 'Password harus mengandung angka.',
+        'email.unique' => 'Email sudah terdaftar.',
+    ]);
 
         $user = User::create([
             'name'         => $request->fullName,
@@ -41,12 +46,10 @@ class AuthController extends Controller
             'role'         => 'user',
             'bio'          => null,
             'badge'        => null,
-            'status_akun'  => 'aktif',
+            'status'  => 'aktif',
             'total_point'  => 0,
             'last_login'   => null,
         ]);
-        $user->profile_image = $request->username;
-
 
         return redirect('/auth')->with('success', 'Akun berhasil dibuat! Silakan login.');
     }
@@ -70,6 +73,11 @@ class AuthController extends Controller
             
             return redirect('/profile');
         }
+
+        $user = Auth::user();
+        $user->update(['last_login' => Carbon::now()]);
+
+        return redirect('/landingpage');
     }
 
     // ============================================================
@@ -110,4 +118,9 @@ class AuthController extends Controller
 
         return redirect('/auth')->with('success', 'Berhasil logout.');
     }
+
+    public function showLogin()
+{
+    return view('user.quiz');
+}
 }

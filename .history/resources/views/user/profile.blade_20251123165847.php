@@ -195,7 +195,7 @@
             <div class="space-y-2 text-sm text-muted-foreground">
                 <p>• Bergabung sejak: {{ \Carbon\Carbon::parse(Auth::user()->created_at)
     ->timezone('Asia/Jakarta')
-    ->format('d F Y') }}</p>
+    ->format('d F Y, H:i') }}</p>
                 <p>• Total materi diselesaikan: 12 materi</p>
                 <p>• Level quiz tertinggi: Level 8</p>
                 <p>• Streak harian: 5 hari berturut-turut</p>

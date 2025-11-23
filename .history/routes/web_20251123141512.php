@@ -29,8 +29,8 @@ Route::get('/login/guest', [AuthController::class, 'loginGuest'])->name('auth.gu
 Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 
-Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile-edit');
+Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
 
 Route::get('/profile', function () {

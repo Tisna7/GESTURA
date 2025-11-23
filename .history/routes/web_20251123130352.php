@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 
+
+
+
 Route::get('/', function () {
     return view('landingpage');
 });
@@ -29,13 +32,18 @@ Route::get('/login/guest', [AuthController::class, 'loginGuest'])->name('auth.gu
 Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 
-Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+Route::post('/login', [AuthController::class, 'login'])->name('login.process');
+Route::get('/login', [AuthController::class, 'showLoginPage'])->name('login');
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
-Route::get('/profile', function () {
-    return view('user.profile');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::post('/profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
 });
+
+
 Route::get('/materi', function () {
     return view('user.materi');
 });
