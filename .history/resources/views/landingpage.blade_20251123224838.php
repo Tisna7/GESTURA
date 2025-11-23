@@ -21,7 +21,8 @@
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8">
                         Masuk</button>
                     </a><a
-                    href="/auth?show=register"><button
+                    href="/auth?show=register">
+                    <a href=""></a><button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 hover-glow">Daftar
                         Sekarang</button></a>
                     </div>
@@ -198,8 +199,7 @@
                             <circle cx="12" cy="12" r="10"></circle>
                             <path d="m9 12 2 2 4-4"></path>
                         </svg><span class="text-lg">Gratis dan mudah digunakan</span></div>
-                </div><a
-                    href="/auth?show=register"><button
+                </div><a href="/register"><button
                         class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 mt-4 hover-glow">Daftar
                         Sekarang<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -269,9 +269,7 @@
             class="rounded-lg border bg-card text-card-foreground shadow-sm p-12 text-center bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
             <h2 class="text-4xl font-bold mb-4">Siap Mulai Belajar?</h2>
             <p class="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Bergabung dengan ribuan pengguna lainnya
-                dan mulai perjalanan belajar bahasa isyarat mu sekarang!</p>
-                <a
-                    href="/auth?show=register"><button
+                dan mulai perjalanan belajar bahasa isyarat mu sekarang!</p><a href="/register"><button
                     class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md text-lg px-8 py-6 hover-glow">Daftar
                     Gratis Sekarang<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
