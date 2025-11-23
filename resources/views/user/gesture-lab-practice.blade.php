@@ -1,5 +1,5 @@
 @extends('app')
-@section('title', 'Dashboard')
+@section('title', 'Gesture Lab Practice')
 
 @section('content')
         <x-sidebar-user></x-sidebar-user>
@@ -27,35 +27,85 @@
             </div>
             <div class="grid lg:grid-cols-3 gap-6">
                 <div class="rounded-lg border text-card-foreground shadow-sm lg:col-span-2 p-6 bg-card border-border/50">
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-xl font-bold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-camera h-5 w-5">
-                                <path
-                                    d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z">
-                                </path>
-                                <circle cx="12" cy="13" r="3"></circle>
-                            </svg>Camera View</h3>
-                        <div
-                            class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
-                            Ready</div>
-                    </div>
-                    <div
-                        class="aspect-video rounded-xl bg-gradient-to-br from-muted/30 to-muted/10 border border-border/50 flex items-center justify-center mb-6">
-                        <div class="text-center">
-                            <div class="text-6xl mb-4">📹</div>
-                            <p class="text-muted-foreground">Camera feed akan tampil di sini</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-center gap-4"><button
-                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 hover-glow"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-play h-5 w-5 mr-2">
-                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                            </svg>Mulai</button></div>
-                </div>
+    <div class="flex items-center justify-between mb-6">
+        <h3 class="text-xl font-bold flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-camera h-5 w-5">
+                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
+                <circle cx="12" cy="13" r="3"></circle>
+            </svg>
+            Camera View
+        </h3>
+        <div
+            class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-secondary text-secondary-foreground">
+            Ready
+        </div>
+    </div>
+
+    <!-- Wrapper -->
+    <div id="videoWrapper"
+        class="aspect-video rounded-xl bg-gradient-to-br from-muted/30 to-muted/10 border border-border/50 flex items-center justify-center mb-6 relative">
+
+        <!-- Placeholder sebelum kamera aktif -->
+        <div id="placeholder" class="text-center">
+            <div class="text-6xl mb-4">📹</div>
+            <p class="text-muted-foreground">Camera feed akan tampil di sini</p>
+        </div>
+
+        <!-- Video: hidden dulu -->
+        <video id="videoFeed" autoplay playsinline class="absolute inset-0 w-full h-full object-cover rounded-xl hidden"></video>
+    </div>
+
+    <div class="flex items-center justify-center gap-4">
+        <button id="startCam"
+            class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 hover-glow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-play h-5 w-5">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+            </svg>
+            Mulai
+        </button>
+    </div>
+</div>
+
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", () => {
+
+                      const startBtn = document.getElementById("startCam");
+                      const videoWrapper = document.getElementById("videoWrapper");
+                      const placeholder = document.getElementById("placeholder");
+                      const video = document.getElementById("videoFeed");
+
+                      let stream = null;
+
+                      startBtn.addEventListener("click", async () => {
+                          try {
+                              stream = await navigator.mediaDevices.getUserMedia({ video: true });
+
+                              video.srcObject = stream;
+                              video.play();
+
+                              // Tampilkan video, sembunyikan placeholder
+                              placeholder.classList.add("hidden");
+                              video.classList.remove("hidden");
+
+                          } catch (error) {
+                              console.error("Gagal membuka kamera:", error);
+                              alert("Tidak bisa mengakses kamera. Pastikan izin kamera diaktifkan.");
+                          }
+                      });
+
+                  });
+                </script>
+
+
+
+
                 <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
                     <h3 class="text-xl font-bold mb-6">Hasil AI</h3>
                     <div class="space-y-4">
@@ -94,6 +144,91 @@
                         </div>
                     </div>
                 </div>
+
+
+                <script>
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const resultText = document.getElementById('result');
+
+let model;
+
+// Load model TensorFlow.js kamu
+async function loadModel() {
+    model = await tf.loadLayersModel('/model/model.json');
+    console.log("Model loaded!");
+}
+loadModel();
+
+// Jalankan kamera
+navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+    video.srcObject = stream;
+});
+
+// Initialize MediaPipe Hands
+const hands = new Hands({
+    locateFile: file => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
+});
+
+hands.setOptions({
+    maxNumHands: 1,
+    modelComplexity: 1,
+    minDetectionConfidence: 0.6,
+    minTrackingConfidence: 0.6
+});
+
+// Jika ada hasil deteksi
+hands.onResults(onResults);
+
+// Kamera util
+const camera = new Camera(video, {
+    onFrame: async () => {
+        await hands.send({ image: video });
+    },
+    width: 500,
+    height: 400
+});
+camera.start();
+
+// Proses hasil deteksi
+function onResults(results) {
+    ctx.save();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Gambar hasil kamera
+    ctx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
+
+    if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
+        const landmarks = results.multiHandLandmarks[0];
+
+        // Gambar landmark
+        drawConnectors(ctx, landmarks, HAND_CONNECTIONS, {color: "#00FF00", lineWidth: 2});
+        drawLandmarks(ctx, landmarks, {color: "#FF0000", lineWidth: 1});
+
+        // ----- PROCESS DATA FOR ML MODEL ------
+        const input = landmarks.flatMap(p => [p.x, p.y, p.z]); // 21 * 3 = 63 values
+        const tensor = tf.tensor([input]);
+
+        if (model) {
+            const prediction = model.predict(tensor);
+            const index = prediction.argMax(1).dataSync()[0];
+
+            resultText.innerText = labelMap[index] || "Unknown";
+        }
+    }
+
+    ctx.restore();
+}
+
+// Mapping index → label
+const labelMap = {
+    0: "A",
+    1: "B",
+    2: "C",
+    // tambah sesuai dataset kamu
+};
+</script>
             </div>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">

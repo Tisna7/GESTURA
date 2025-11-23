@@ -41,21 +41,64 @@
                         class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
                         Ready</div>
                 </div>
-                <div
-                    class="aspect-video rounded-xl bg-gradient-to-br from-muted/30 to-muted/10 border border-border/50 flex items-center justify-center mb-6">
-                    <div class="text-center">
-                        <div class="text-6xl mb-4">📹</div>
-                        <p class="text-muted-foreground">Camera feed akan tampil di sini</p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center gap-4"><button
-                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 hover-glow"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-play h-5 w-5 mr-2">
-                            <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg>Mulai</button></div>
-            </div>
+                <!-- Wrapper -->
+    <div id="videoWrapper"
+        class="aspect-video rounded-xl bg-gradient-to-br from-muted/30 to-muted/10 border border-border/50 flex items-center justify-center mb-6 relative">
+
+        <!-- Placeholder sebelum kamera aktif -->
+        <div id="placeholder" class="text-center">
+            <div class="text-6xl mb-4">📹</div>
+            <p class="text-muted-foreground">Camera feed akan tampil di sini</p>
+        </div>
+
+        <!-- Video: hidden dulu -->
+        <video id="videoFeed" autoplay playsinline class="absolute inset-0 w-full h-full object-cover rounded-xl hidden"></video>
+    </div>
+
+    <div class="flex items-center justify-center gap-4">
+        <button id="startCam"
+            class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 hover-glow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-play h-5 w-5">
+                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+            </svg>
+            Mulai
+        </button>
+    </div>
+</div>
+
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", () => {
+
+                      const startBtn = document.getElementById("startCam");
+                      const videoWrapper = document.getElementById("videoWrapper");
+                      const placeholder = document.getElementById("placeholder");
+                      const video = document.getElementById("videoFeed");
+
+                      let stream = null;
+
+                      startBtn.addEventListener("click", async () => {
+                          try {
+                              stream = await navigator.mediaDevices.getUserMedia({ video: true });
+
+                              video.srcObject = stream;
+                              video.play();
+
+                              // Tampilkan video, sembunyikan placeholder
+                              placeholder.classList.add("hidden");
+                              video.classList.remove("hidden");
+
+                          } catch (error) {
+                              console.error("Gagal membuka kamera:", error);
+                              alert("Tidak bisa mengakses kamera. Pastikan izin kamera diaktifkan.");
+                          }
+                      });
+
+                  });
+                </script>
             <div class="rounded-lg border text-card-foreground shadow-sm p-6 bg-card border-border/50">
                 <h3 class="text-xl font-bold mb-6">Hasil Deteksi</h3>
                 <div class="space-y-4">
